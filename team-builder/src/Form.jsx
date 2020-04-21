@@ -8,7 +8,7 @@ function Form(props) {
     } = props
 
     return (
-        <form className='member container'>
+        <form className='member container' onSubmit={onSubmit}>
             <h2>Member Form</h2>
 
             {/* ///////////// TEXT INPUTS /////////// */}
@@ -20,6 +20,7 @@ function Form(props) {
                     type='text'
                 />
             </label>
+            &nbsp;&nbsp;&nbsp; {/* spacing between input fields */}
             <label>Email:&nbsp;
                 <input 
                     value={values.email}
@@ -27,6 +28,7 @@ function Form(props) {
                     name='email'
                     type='text'
                 />
+            &nbsp;&nbsp;&nbsp; {/* spacing between input fields */}
             </label>
             <label>Role:&nbsp;
                 <input 
@@ -36,6 +38,9 @@ function Form(props) {
                     type='text'
                 />
             </label>
+            <br />
+            <br />
+            <button onClick={onSubmit}>submit</button>
         </form>
     )
 }

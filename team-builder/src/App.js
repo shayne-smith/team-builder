@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Member from './Member';
+import Form from './Form';
 import './App.css';
 
 const initialTeamList = [
@@ -22,6 +23,31 @@ function App() {
 
   const [formValues, setFormValues] = useState(initialFormValues)
 
+  // Implement change handlers (works for inputs and dropdowns)
+  const onInputChange = evt => {
+
+    const name = evt.target.name
+    const value = evt.target.value
+
+    setFormValues({
+      ...formValues,
+      [name]: value,
+    })
+  }
+
+  const onSubmit = evt => {
+    evt.preventDefault()
+    
+    const newMember = {
+      name: formValues.name,
+      email: formValues.email,
+      role: formValues.role,
+    }
+
+    setTeamList([ ...teamList, newMember ])
+    setFormValues(initialFormValues)
+  }
+
   return (
     <div className='container'>
       <header><h1>Team Members App</h1></header>
@@ -32,6 +58,12 @@ function App() {
           )
         })
       }
+
+      <Form
+        values={formValues}
+        onInputChange={onInputChange}
+        onSubmit={onSubmit}
+      />
     </div>
   );
 }
