@@ -42,15 +42,15 @@ function Form(props) {
                     onChange={onInputChange}
                     name='role'
                 >
-                    <option defaultValue='backend'>Backend Engineer</option>
-                    <option value='frontend'>Frontend Engineer</option>
-                    <option value='projectManager'>Project Manager</option>
-                    <option value='uiDesigner'>UI/UX Designer</option>
-                    <option value='marketer'>Digital Marketer</option>
-                    <option value='dataScience'>Data Scientist</option>
-                    <option value='ml'>Machine Learning </option>
-                    <option value='systems'>Systems Engineer</option>
-                    <option value='manufacturing'>Manufacturing Engineer</option>
+                    <option defaultValue='Backend Engineer'>Backend Engineer</option>
+                    <option value='Frontend Engineer'>Frontend Engineer</option>
+                    <option value='Project Manager'>Project Manager</option>
+                    <option value='UI/UX Designer'>UI/UX Designer</option>
+                    <option value='Digital Marketer'>Digital Marketer</option>
+                    <option value='Data Scientist'>Data Scientist</option>
+                    <option value='Machine Learning'>Machine Learning</option>
+                    <option value='Systems Engineer'>Systems Engineer</option>
+                    <option value='Manufacturing Engineer'>Manufacturing Engineer</option>
                 </select>
             </label>
             <br />
