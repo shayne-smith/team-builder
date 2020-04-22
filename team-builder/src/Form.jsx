@@ -38,9 +38,14 @@ function Form(props) {
                     type='text'
                 />
             </label>
+            <label>
+                <select
+                    // value={values.}
+                ></select>
+            </label>
             <br />
             <br />
-            <button onClick={onSubmit}>submit</button>
+            <button onClick={onSubmit}>Submit</button>
         </form>
     )
 }

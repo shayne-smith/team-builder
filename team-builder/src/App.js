@@ -20,8 +20,8 @@ const initialFormValues = {
 function App() {
   // set state for App function
   const [teamList, setTeamList] = useState(initialTeamList)
-
   const [formValues, setFormValues] = useState(initialFormValues)
+  const [memberToEdit, setMemberToEdit] = useState({})
 
   // Implement change handlers (works for inputs and dropdowns)
   const onInputChange = evt => {
@@ -46,6 +46,11 @@ function App() {
 
     setTeamList([ ...teamList, newMember ])
     setFormValues(initialFormValues)
+  }
+
+  const onEdit = evt => {
+
+    setMemberToEdit(memberToEdit)
   }
 
   return (
