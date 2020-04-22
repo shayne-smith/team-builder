@@ -7,13 +7,19 @@ function Form(props) {
         onSubmit,
     } = props
 
+    const [initialFormValues, setInitialFormValues] = useState({
+        name: '',
+        email: '',
+        role: '',
+    })
+
     return (
         <form className='member container' onSubmit={onSubmit}>
             <h2>Member Form</h2>
 
             {/* ///////////// TEXT INPUTS /////////// */}
             <label>Name:&nbsp;
-                <input 
+                <input    
                     value={values.name}
                     onChange={onInputChange}
                     name='name'
@@ -30,18 +36,22 @@ function Form(props) {
                 />
             &nbsp;&nbsp;&nbsp; {/* spacing between input fields */}
             </label>
-            <label>Role:&nbsp;
-                <input 
+            <label>&nbsp;
+                <select
                     value={values.role}
                     onChange={onInputChange}
                     name='role'
-                    type='text'
-                />
-            </label>
-            <label>
-                <select
-                    // value={values.}
-                ></select>
+                >
+                    <option defaultValue='backend'>Backend Engineer</option>
+                    <option value='frontend'>Frontend Engineer</option>
+                    <option value='projectManager'>Project Manager</option>
+                    <option value='uiDesigner'>UI/UX Designer</option>
+                    <option value='marketer'>Digital Marketer</option>
+                    <option value='dataScience'>Data Scientist</option>
+                    <option value='ml'>Machine Learning </option>
+                    <option value='systems'>Systems Engineer</option>
+                    <option value='manufacturing'>Manufacturing Engineer</option>
+                </select>
             </label>
             <br />
             <br />
