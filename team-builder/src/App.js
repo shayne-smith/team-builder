@@ -7,7 +7,7 @@ const initialTeamList = [
   {
     name: 'Shayne',
     email: 'shayne.m.smith@vanderbilt.edu',
-    role: 'backend engineer'
+    role: 'Backend Engineer'
   },
 ]
 
